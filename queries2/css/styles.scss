@@ -1,0 +1,138 @@
+*, *:before,*:after{
+	box-sizing: border-box;
+}
+
+
+body{
+	background-color: red;
+
+}
+header{
+	nav{
+		ul{
+			&:before,
+			&:after{
+				content:"";
+				display: block;
+				clear:both;
+			}
+			li{
+				display: inline-block;
+				width: 25%;
+				float: left;
+			}
+		}
+	}
+}
+
+main{
+	section:first-of-type{
+		background-image: url("http://i.imgur.com/deXiwDh.jpg");
+		background-size: cover;
+		div:first-child{
+			width: 25%;
+			background-color: hsla(0,0,0, .5);
+			
+
+		}
+		div:last-child{
+			width: 75%;
+			
+		}
+
+	}
+	section{
+		div{
+			width: 33.333%;
+			float: left;
+			padding:10px;
+			border: 2px solid;
+		}
+	}
+
+	section:last-of-type{
+		div{
+			width: 50%;
+			
+		}
+	}
+	section:before,
+	section:after{
+		content:"";
+		display: block;
+		clear: both;
+	}
+}
+
+#headur{
+	display: none;
+}
+
+
+
+
+
+
+
+
+
+@media screen and(min-width:500px) and (max-width: 756px){
+	header{
+		display: none;
+	}
+	#headur{display: block;}
+
+	section:first-of-type{
+		div:first-child{
+			width: 75%
+
+		}
+		div:last-child{
+			width:25%
+		}
+
+	}
+	.test{
+		width: 20%;
+	}
+	.mid{
+		width: 60%;
+	}
+
+	section:last-of-type{
+		div:first-of-type{
+			width: 25%;
+			
+		}
+		div:last-of-type{
+			width:75%;
+		}
+	}
+
+}
+
+
+@media screen and (max-width: 500px){
+	nav{
+		ul{
+			li{
+				display: block;
+				width: 100%;
+				text-align: center;
+				padding: 10px, 0;
+			}
+		}
+	}
+	section{
+		div{
+			width:100% !important;
+		}
+	}
+	.no-phone{
+		display: none;
+		
+	}
+
+
+}
+
